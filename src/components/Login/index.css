@@ -1,0 +1,50 @@
+.bgcontainer {
+  background-color: #000000;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+app-container {
+  background-color: #272727;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+.card1 {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.form {
+  padding: 20px;
+}
+.logo {
+  height: 80px;
+}
+.label {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 22px;
+}
+.input {
+  padding: 10px;
+  color: #1f2021;
+  font-family: Roboto;
+  font-size: 22px;
+}
+.button {
+  background-color: #4f46e5;
+  border-bottom: 2px solid;
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 22px;
+}
+.error {
+  color: red;
+  font-family: Roboto;
+  font-size: 13px;
+}

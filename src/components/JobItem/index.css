@@ -1,0 +1,61 @@
+.card-item {
+  background-color: #202020;
+  background-size: cover;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border-radius: 10px;
+}
+.companylogo {
+  height: 100px;
+  width: 60px;
+}
+.job-head {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 24px;
+}
+.top {
+  display: flex;
+  align-items: center;
+}
+.rating-icon {
+  display: flex;
+  align-items: center;
+}
+.para1 {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 18px;
+}
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+.two-icons {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+.location-icon {
+  display: flex;
+  align-items: center;
+}
+.description {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 18px;
+}
+.location {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 20px;
+}
+.desc-head {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 20px;
+}

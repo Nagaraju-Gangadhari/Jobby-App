@@ -1,0 +1,59 @@
+.contain {
+  background-color: black;
+  background-size: cover;
+}
+.first-card {
+  width: 30%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.type {
+  display: flex;
+  flex-direction: column;
+}
+.separator {
+  margin: 10px;
+  width: 90%;
+}
+.second-card {
+  width: 70%;
+  margin: 20px;
+}
+.card {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  width: 300px;
+  background-size: cover;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+
+  margin: 10px;
+}
+.appcontainer {
+  display: flex;
+}
+.typeHeading {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 26px;
+}
+.head {
+  color: #6366f1;
+  font-family: Roboto;
+  font-size: 20px;
+}
+.avatar {
+  height: 100px;
+  width: 100px;
+}
+.para {
+  color: #202020;
+  font-family: Roboto;
+  font-size: 16px;
+}
+.list-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
