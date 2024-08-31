@@ -50,6 +50,28 @@ const salaryRangesList = [
     label: '40 LPA and above',
   },
 ]
+const locationList = [
+  {
+    id: 'HYDERABAD',
+    label: 'Hyderabad',
+  },
+  {
+    id: 'BANGALORE',
+    label: 'Bangalore',
+  },
+  {
+    id: 'CHENNAI',
+    label: 'Chennai',
+  },
+  {
+    id: 'DELHI',
+    label: 'Delhi',
+  },
+  {
+    id: 'MUMBAI',
+    label: 'Mumbai',
+  },
+]
 class Jobs extends Component {
   state = {
     searchInput: '',
@@ -59,6 +81,7 @@ class Jobs extends Component {
     profileList: {},
     employmentType: '',
     packageSal: '',
+    locationid: '',
   }
 
   componentDidMount() {
@@ -95,8 +118,8 @@ class Jobs extends Component {
 
   getjobslist = async () => {
     this.setState({isLoading: apiStatusList.inprogress})
-    const {employmentType, searchInput, packageSal} = this.state
-    const url = `https://apis.ccbp.in/jobs?employment_type=${employmentType}&minimum_package=${packageSal}&search=${searchInput}`
+    const {employmentType, searchInput, packageSal, locationid} = this.state
+    const url = `https://apis.ccbp.in/jobs?employment_type=${employmentType}&minimum_package=${packageSal}&search=${searchInput}&location=${locationid}`
     const jwtToken = Cookies.get('jwt_token')
     const options = {
       headers: {
@@ -150,6 +173,10 @@ class Jobs extends Component {
 
   onChangePackage = event => {
     this.setState({packageSal: event.target.value}, this.getjobslist)
+  }
+
+  onChangePackageLoc = event => {
+    this.setState({locationid: event.target.value}, this.getjobslist)
   }
 
   onSubmissionSearchForm = event => {
@@ -294,6 +321,28 @@ class Jobs extends Component {
                           value={each.salaryRangeId}
                         />
                         <label htmlFor={each.salaryRangeId} className="label">
+                          {each.label}
+                        </label>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </form>
+            </div>
+            <div>
+              <h1 className="typeHeading">Location</h1>
+              <form className="type" onChange={this.onChangePackageLoc}>
+                <ul className="list-container">
+                  {locationList.map(each => (
+                    <li key={each.id}>
+                      <div>
+                        <input
+                          type="radio"
+                          id={each.id}
+                          name="salary"
+                          value={each.id}
+                        />
+                        <label htmlFor={each.id} className="label">
                           {each.label}
                         </label>
                       </div>
